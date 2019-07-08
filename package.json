@@ -1,0 +1,23 @@
+{
+  "name": "moviebot",
+  "version": "1.0.0",
+  "description": "Bot for recommending movies based on genre",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --inspect index.js"
+  },
+  "keywords": [
+    "moviebot"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "country-language": "^0.1.7",
+    "express": "^4.16.3",
+    "node-debug": "^0.1.0",
+    "recastai": "^3.7.0"
+  }
+}

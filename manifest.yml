@@ -1,0 +1,6 @@
+---
+applications:
+- name: themoviebot
+  command: npm run start
+  path: ./
+  memory: 512M
