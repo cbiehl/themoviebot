@@ -17,24 +17,20 @@ app.post('/errors', (req, res) => {
 
 app.post('/discover-movies', (req, res) => {
     console.log('[POST] /discover-movies');
-    const memory = req.body.conversation.memory;
-    const movie = memory.movie;
-    const tv = memory.tv;
 
-    // Check for the presence of entities movie or tv
-    // If both are present, we prioritize movie
-    const kind = movie ? 'movie' : 'tv';
+    // ##################################################################
+    // INSERT YOUR CODE HERE
 
-    const genre = memory.genre;
-    const genreId = constants.getGenreId(genre.value);
+    /*
+        Extract the relevant fields from memory and store them in the variables
+        kind (movie or tv), genreId and isoCode.
 
-    const language = memory.language;
-    const nationality = memory.nationality;
+        You can get the genreId by the genre name (e.g. "western") using
+        the function: constants.getGenreId(genre.value).
+    */
 
-    // Similar to movie and tv, we prioritize language over nationality
-    const isoCode = language
-      ? language.short.toLowerCase()
-      : countryLanguage.getCountryLanguages(nationality.short)[0].iso639_1;
+    // END OF YOUR CODE HERE
+    // ##################################################################
 
     // Call the moviedb API and return movies as carouselle (see file discoverMovie.js)
     // You can also pass a parameter "datetime", if you collected the #DATETIME entity
