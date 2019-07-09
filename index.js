@@ -23,7 +23,7 @@ app.post('/discover-movies', (req, res) => {
 
     /*
         Extract the relevant fields from memory and store them in the variables
-        kind (movie or tv), genreId and isoCode.
+        kind ('movie' or 'tv'), genreId and isoCode (e.g. 'en').
 
         You can get the genreId by the genre name (e.g. "western") using
         the function: constants.getGenreId(genre.value).
